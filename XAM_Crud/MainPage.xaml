@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             x:Class="XAM_Crud.MainPage">
+
+    <StackLayout>
+        <StackLayout HorizontalOptions="Center">
+            
+            <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+                <Label Text="Product CRUD APP" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+            </Frame>
+
+            <Button Text="Agregar Producto" Clicked="Agregar_clicl"></Button>
+            <Button Text="Elimnar Producto" Clicked="Elimnar_Click"></Button>
+            <Button Text="aActualizar producto" Clicked="Actualizar_Click"></Button>
+            <ListView x:Name="listaproducts" HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout HorizontalOptions="Center">
+                                <Label Text="{Binding Name}"  />
+                                <Label Text="{Binding Price}"  />
+                            </StackLayout>                        
+                            
+                        </ViewCell>                       
+                        
+                    </DataTemplate>
+                    
+                </ListView.ItemTemplate>
+                <!--<d:ListView.ItemTemplate>
+                    <DataTemplate>
+                        <Label Text="{Binding Name}"  />
+
+                    </DataTemplate>
+
+                </d:ListView.ItemTemplate>-->
+
+            </ListView>
+
+          
+            <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="30,0,30,0"/>
+             
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
